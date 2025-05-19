@@ -1,11 +1,13 @@
 simulate_io <- function(
     run     = 3,
-    size,
+    size    = 5,
     tmpdir  = tempdir(),
     verbose = T,
     cores   = 0L
 ) {
 
+
+  # parallel
 
 
 }
@@ -24,7 +26,6 @@ bm_write_read <- function(
 
   n    <- 62.5e3 * size
   df   <- data.frame(matrix(rnorm(n), ncol = 10))
-  test <- rep(paste0('read_', size), runs)
 
   df_timing <-
     create_timing_df(runs, paste(sep = '_', c('write', 'read'), size), 'io')
@@ -52,11 +53,13 @@ bm_write_read <- function(
 
     if (verbose) {
 
-      message(
+      msg_verbose(
         sprintf(
           paste0('\t>>> %', padding, 's: csv with %s values (size ~ %s MB)'),
           df_timing[i, 'test'], n, size
-        )
+        ),
+        df_timing,
+        df_timing[i, 'test']
       )
 
     }
@@ -69,4 +72,3 @@ bm_write_read <- function(
   return(df_timing)
 
 }
-
