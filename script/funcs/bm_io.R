@@ -1,20 +1,3 @@
-simulate_io <- function(
-    run     = 3,
-    size    = 5,
-    tmpdir  = tempdir(),
-    verbose = T,
-    cores   = 0L
-) {
-
-
-  # parallel
-
-
-}
-
-
-# Helpers -----------------------------------------------------------------
-
 bm_write_read <- function(
     runs    = 3,
     size    = 5,
