@@ -8,10 +8,12 @@
 #' @export
 #'
 #' @examples
-bm_matrix_cal_manip <- function(runs = 3, size = 2500, verbose = T) {
+bm_matrix_calc_manip <- function(runs = 3, size = 2500, verbose = T) {
 
   df_timing <-
-    create_timing_df(runs = runs, test_name = 'manip', test_group = 'matrix_calc')
+    create_timing_df(
+      runs = runs, test_name = 'manip', test_group = 'matrix_calc'
+    )
 
   for (i in seq_len(nrow(df_timing))) {
 
@@ -62,10 +64,12 @@ bm_matrix_cal_manip <- function(runs = 3, size = 2500, verbose = T) {
 #' @export
 #'
 #' @examples
-bm_matrix_cal_power <- function(runs = 3, size = 2500, verbose = T) {
+bm_matrix_calc_power <- function(runs = 3, size = 2500, verbose = T) {
 
   df_timing <-
-    create_timing_df(runs = runs, test_name = 'power', test_group = 'matrix_calc')
+    create_timing_df(
+      runs = runs, test_name = 'power', test_group = 'matrix_calc'
+    )
 
   for (i in seq_len(nrow(df_timing))) {
 
@@ -113,10 +117,12 @@ bm_matrix_cal_power <- function(runs = 3, size = 2500, verbose = T) {
 #' @export
 #'
 #' @examples
-bm_matrix_cal_sort <- function(runs = 3, size = 2500, verbose = T) {
+bm_matrix_calc_sort <- function(runs = 3, size = 2500, verbose = T) {
 
   df_timing <-
-    create_timing_df(runs = runs, test_name = 'sort', test_group = 'matrix_calc')
+    create_timing_df(
+      runs = runs, test_name = 'sort', test_group = 'matrix_calc'
+    )
 
   for (i in seq_len(nrow(df_timing))) {
 
@@ -167,10 +173,12 @@ bm_matrix_cal_sort <- function(runs = 3, size = 2500, verbose = T) {
 #' @export
 #'
 #' @examples
-bm_matrix_cal_cross_product <- function(runs = 3, size = 2500, verbose = T) {
+bm_matrix_calc_cross_product <- function(runs = 3, size = 2500, verbose = T) {
 
   df_timing <-
-    create_timing_df(runs = runs, test_name = 'crossprod', test_group = 'matrix_calc')
+    create_timing_df(
+      runs = runs, test_name = 'crossprod', test_group = 'matrix_calc'
+    )
 
   for (i in seq_len(nrow(df_timing))) {
 
@@ -218,10 +226,12 @@ bm_matrix_cal_cross_product <- function(runs = 3, size = 2500, verbose = T) {
 #' @export
 #'
 #' @examples
-bm_matrix_cal_lm <- function(runs = 3, size = 1000, verbose = T) {
+bm_matrix_calc_lm <- function(runs = 3, size = 1000, verbose = T) {
 
   df_timing <-
-    create_timing_df(runs = runs, test_name = 'lm', test_group = 'matrix_calc')
+    create_timing_df(
+      runs = runs, test_name = 'lm', test_group = 'matrix_calc'
+    )
 
   for (i in seq_len(nrow(df_timing))) {
 
