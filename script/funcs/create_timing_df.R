@@ -4,6 +4,7 @@ create_timing_df <- function(runs, test_name, test_group) {
 
   system.time(T) %>%
     { .[which(!is.na(.))] } %>%
+    { .[which(!grepl('child', names(.)))] } %>%
     { set_names(., gsub('\\.self', '', names(.))) } %>%
     as.list() %>%
     as.data.frame() %>%
