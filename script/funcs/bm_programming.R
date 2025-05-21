@@ -35,7 +35,7 @@ bm_prog_fib <- function(runs = 3, size = 3.5e6, verbose = T) {
 
       msg_verbose(
         sprintf(
-          '\t>>> %s Fibonacci numbers calculation (vecter cal) ',
+          '\t>>> %s Fibonacci numbers calculation (vecter calc)',
           size
         ),
         df_timing,
