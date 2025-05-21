@@ -11,6 +11,8 @@
 
 seed <- sample(c(100:1000), 1) # or enter your fave number
 
+set.seed(seed)
+
 size_mult_min <- 5
 size_mult_max <- 10
 
