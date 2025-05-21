@@ -8,7 +8,7 @@
 #' @export
 #'
 #' @examples
-bm_matrix_func_fft <- function(runs = 3, size = 2.5e6, verbose = T) {
+bm_matrix_func_fft <- function(runs = 3, size = 1e6, verbose = T) {
 
   df_timing <-
     create_timing_df(
