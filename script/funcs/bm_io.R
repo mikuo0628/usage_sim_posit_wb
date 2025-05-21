@@ -1,6 +1,6 @@
 bm_write_read <- function(
     runs    = 3,
-    size    = 5,
+    size    = 10,
     tmpdir  = tempdir(),
     verbose = T
 ) {
