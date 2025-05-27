@@ -13,11 +13,11 @@ seed <- sample(c(100:1000), 1) # or enter your fave number
 
 set.seed(seed)
 
-runs_mult_min <- 1
-runs_mult_max <- 1
+runs_mult_min <- 2
+runs_mult_max <- 5
 
-size_mult_min <- 1
-size_mult_max <- 1
+size_mult_min <- 5
+size_mult_max <- 10
 
 if (inherits(try(find.package('magrittr'), silent = T), 'try-error')) {
 
@@ -54,8 +54,12 @@ for (i in seq_along(df_funcs$func)) {
       as.integer(
         sample(
           do.call(
-            seq,
-            list(df_funcs[i, 'runs'] * c(runs_mult_min, runs_mult_max))
+            base::seq,
+            c(
+              df_funcs[i, 'runs'] * c(runs_mult_min, runs_mult_max)
+            ) %>%
+              set_names(c('from', 'to')) %>%
+              as.list()
           ),
           1
         )
@@ -73,8 +77,12 @@ for (i in seq_along(df_funcs$func)) {
       as.integer(
         sample(
           do.call(
-            seq,
-            list(df_funcs[i, 'size'] * c(size_mult_min, size_mult_max))
+            base::seq,
+            c(
+              df_funcs[i, 'size'] * c(size_mult_min, size_mult_max)
+            ) %>%
+              set_names(c('from', 'to')) %>%
+              as.list()
           ),
           1
         )
