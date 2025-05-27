@@ -13,11 +13,10 @@ seed <- sample(c(100:1000), 1) # or enter your fave number
 
 set.seed(seed)
 
-runs_mult_min <- 2
-runs_mult_max <- 5
-
-size_mult_min <- 5
-size_mult_max <- 10
+runs_mult_min <- 1 # 1
+runs_mult_max <- 1 # 3
+size_mult_min <- 1 # 2
+size_mult_max <- 1 # 5
 
 if (inherits(try(find.package('magrittr'), silent = T), 'try-error')) {
 
